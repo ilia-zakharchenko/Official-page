@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Илья Захарченко — официальный сайт</title>
+        <meta charset="utf-8">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        $(function(){
+            let layoutContainer = $('.layout-container');
+            $('button').on('click', function(){
+                layoutContainer.css('display', 'flex');
+            });
+
+            layoutContainer.on('click', function(e){
+                if(this === e.target) {
+                    layoutContainer.css('display', 'none');
+                }
+            });
+
+            $('.layout button').on('click', function(){
+                let request = {
+                    'name': $('.layout input[name="name"]').val(),
+                    'email': $('.layout input[name="email"]').val()
+                };
+
+                $.post('C:/Users/ilaza/Desktop/Илья/Илья Захарченко - Официальный сайт/api.php', request, function(response){
+                    if(response == '1') {
+                        layoutContainer.css('display', 'none');
+                    } else {
+                        alert('Что-то пошло не так :(');
+                    }
+                });
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="layout-container">
+            <div class="layout">
+                <h2>Отправить заявку</h2>
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш e-mail" required>
+                <button class="light-button">Отправить</button>
+            </div>
+        </div>
+        <header>
+            <div class="fixed-container">
+                <buttom class="collapsible">
+                    <div class="content">
+                        <nav>
+                            <a href="#">Услуги</a>
+                            <a href="#">Портфолио</a>
+                            <a href="#">Стоимость</a>
+                        </nav>
+                    </div>
+                </buttom>    
+                <div>
+                    +7 950 137-46-70
+                    &nbsp;&nbsp;&nbsp;
+                    <button class="light-button">Заказать звонок</button>
+                </div>
+            </div>
+        </header>
+        <section class="first-block">
+            <div class="fixed-container">
+                <h1>Илья Захарченко</h1>
+                <p class="subtitle">Frontend-разработчик и веб-верстальщик</p>
+                <button class="dark-button">Узнать больше</button>
+            </div>    
+              
+        </section>
+        <section>
+            <div class="fixed-container">
+                <h2>Что я делаю</h2>
+                <div class="services">
+                    <div>
+                        <img src="C:/Users/ilaza/Desktop/Илья/Илья Захарченко - Официальный сайт/img/1.png">
+                        Вёрстка лэндинг-страниц и сайтов любой сложности
+                    </div>
+                    
+                    <div>
+                        <img src="C:/Users/ilaza/Desktop/Илья/Илья Захарченко - Официальный сайт/img/2.png">
+                        Адаптивная вёрстка под все браузеры и устройства
+                    </div>
+                    <div>
+                        <img src="C:/Users/ilaza/Desktop/Илья/Илья Захарченко - Официальный сайт/img/3.png">
+                        Frontend-разработка и программирование
+                    </div>
+                    <div>
+                        <img src="C:/Users/ilaza/Desktop/Илья/Илья Захарченко - Официальный сайт/img/4.png">
+                        Исправление и доработка существующей вёрстки
+                    </div>
+                </div>
+                <button class="light-button">Узнать стоимость</button>
+            </div>
+        </section>
+    </body>
+</html>

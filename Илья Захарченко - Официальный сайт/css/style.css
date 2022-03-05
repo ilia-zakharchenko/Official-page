@@ -1,0 +1,135 @@
+html, head, body {
+    padding: 0;
+    margin: 0;
+    color: #060606;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200px;
+    background: linear-gradient(to right, #F6EFD2, #CEAD78);
+
+}
+a {
+    color: black;
+    margin-right: 30px;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+header {
+    height: 100px;
+}
+.fixed-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    font-size: 14px;
+    padding: 15px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.light-button {
+    background-color: transparent;
+    border: 1px solid black;
+}
+.dark-button {
+    border: 1px solid #3b52fe;
+    color: white;
+    background-color: #3b52fe;
+}
+.first-block > div {
+    height: 500px;
+    background-image: url('C:/Users/ilaza/Desktop/Илья/Илья Захарченко - Официальный сайт/img/man.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px;
+    
+}
+h1 {
+    font-size: 60px;
+    margin: 0 0 20px 0;
+    text-shadow: 5px 3px #9aeee7;
+}
+h2 {
+    font-size: 40px;
+}
+.subtitle {
+    margin: 0 0 30px 0;
+}
+.services {
+    margin: 60px 0;
+    height: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+.services > div {
+    width: 210px;
+    height: 210px;
+    font-size: 16px;
+}
+.services img {
+    width: 175px;
+    height: 175px;
+    margin-bottom: 20px;
+}
+
+.layout-container {
+    position: fixed;
+    background-color: #0000009e;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout {
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    padding: 30px;
+}
+
+.layout input {
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.layout h2 {
+    font-size: 30px;
+    margin: 0 0 30px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    background-color: #f1f1f1;
+}
+
+.man{
+    padding-left: 500px;
+    margin: 60px 0;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+}
